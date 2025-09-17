@@ -4,7 +4,7 @@
 FILENAME=$(hostname)
 echo "Disk report saved to $FILENAME.report"
 
-echo -e "\n LVM Configuration: \n\n" >>$FILENAME.report
+echo -e "\n LVM Configuration: \n\n" >$FILENAME.report
 lvscan >>$FILENAME.report
 vgscan >>$FILENAME.report
 pvscan >>$FILENAME.report
